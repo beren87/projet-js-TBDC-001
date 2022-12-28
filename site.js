@@ -17,21 +17,21 @@ function RefreshWysiwyg(){
   let imageMaxWith = document.getElementById("imgMaxWidthWysiwyg").value;
   document.getElementById('imgWysiwygResultat').style.width = ''+imageMaxWith+'px';
 }
-/*
+
 function OnMouseOver(){
-  var tousLabels = document.querySelectorAll("input");
+  var tousLabels = document.querySelectorAll("label");
   tousLabels.forEach(monLabel => {
-      monLabel.style.padding = '5px';
+      monLabel.style.color = 'lightpink';
   });
 }
 
 function OnMouseLeave(){
-  var tousLabels = document.querySelectorAll("input");
+  var tousLabels = document.querySelectorAll("label");
   tousLabels.forEach(monLabel => {
-      monLabel.style.padding = 'inherit';
+      monLabel.style.color = 'aliceblue';
   });
 }
-*/
+
 var btn = document.getElementById("btnGenererWysiwyg");
 btn.addEventListener('click', RefreshWysiwyg);
 
@@ -43,6 +43,6 @@ mesInputsWithEvents.forEach(monInput => {
   monInput.addEventListener("keyup", RefreshWysiwyg);
   monInput.addEventListener("change", RefreshWysiwyg);
 
- // monInput.addEventListener("mouseover", OnMouseOver)
- // monInput.addEventListener("mouseleave", OnMouseLeave)
+ monInput.addEventListener("mouseover", OnMouseOver)
+ monInput.addEventListener("mouseleave", OnMouseLeave)
 });
